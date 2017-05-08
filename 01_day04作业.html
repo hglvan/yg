@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function func2(a, b, p){
+				switch(p){
+					case "+": 
+						return a+b;
+					case "-":
+						return a-b;
+					case "*":
+						return a*b;
+					case "/":
+						return a/b;
+					default:
+						return 0;
+				}
+			}
+	window.onload=function(){
+			
+		       var a = document.getElementById("a");
+				var b = document.getElementById("b");
+				var c = document.getElementById("c");
+				var btn = document.getElementById("btn");
+				var result = document.getElementById("result");
+		
+			btn.onclick = function(){
+				var d1 = a.value - 0; 
+				var fh = c.value; 
+				var d2 = b.value - 0; 
+      
+						
+		var ret = func2(d1, d2, fh);		
+			result.innerHTML = ret;
+
+				
+									
+			}
+			
+			}
+			
+			
+			
+		</script>
+	</head>
+	<body>
+		<input type="text" placeholder="请输入第一个数字" id="a" /> <br />
+		<input type="text" placeholder="请输入运算符" id="c" /> <br />
+		<input type="text" placeholder="请输入第二个数字" id="b" /> <br />
+		 <button id="btn" onclick="btnClick()">=</button>
+		<span id="result">0</span>
+	</body>
+</html>
